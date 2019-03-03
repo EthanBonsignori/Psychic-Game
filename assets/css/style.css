@@ -1,12 +1,79 @@
+body {
+  background-color: hsl(281, 100%, 80%);
+  border: 30px solid hsl(281, 100%, 20%);
+  position: relative;
+  margin: 200px;
+  box-shadow: 
+    0 0 0 30px hsl(281, 100%, 30%),
+    0 0 0 60px hsl(281, 100%, 40%),
+    0 0 0 90px hsl(281, 100%, 50%),
+    0 0 0 120px hsl(281, 100%, 60%),
+    0 0 0 150px hsl(281, 100%, 70%),
+    0 0 0 180px hsl(281, 100%, 80%),
+    0 0 0 210px hsl(281, 100%, 90%);
+}
+
+div {
+  margin: 150px 600px;
+}
+
 h1 {
-  font-weight: bold;
-  font-size: 300%;
+  font-family: 'Rock Salt', cursive;
+  font-size: 600%;
   text-align: center;
-  outline: 10px;
-  outline-color: purple;
+  margin-bottom: 5rem;
+  -webkit-text-stroke: 6px hsl(281, 100%, 40%);
+  color: white;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
 }
 
 p {
-  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 200%;
+  text-align: center;
+  color: hsl(281, 100%, 20%);
+}
+
+.wins {
+  float: left;
+  display: inline-block;
+}
+
+.guesses {
+ padding-bottom: 100px
+}
+
+.losses {
+  float: right;
+  display: inline-block;
+}
+
+#tryagain-text {
+  margin-top: 2rem;
+  color: red;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+   visibility: hidden;
+   opacity: 0;
+  -webkit-transition: visibility 0s 1.5s, opacity 1.5s linear;
+  -moz-transition: visibility 0s 1.5s, opacity 1.5s linear;
+  -o-transition: visibility 0s 1.5s, opacity 1.5s linear;
+  transition: visibility 0s 1.5s, opacity 1.5s linear;
+}
+
+#name {
+  font-size: 100%;
+  text-align: center;
+  padding-bottom: 2rem;
 }

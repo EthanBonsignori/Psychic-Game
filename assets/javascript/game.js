@@ -25,7 +25,8 @@ var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var guessesText = document.getElementById("guesses-text");
 var usedText = document.getElementById("used-text");
-var tryagainText = document.getElementById("tryagain-text");
+
+var fadeText = document.getElementById("tryagain-text");
 
 // Functions
 // Picks a random letter from the alphabet array
@@ -52,7 +53,8 @@ document.onkeyup = function(event) {
   if (alphabet.indexOf(playerGuess) >= 0) {
     console.log("Player's Letter: " + playerGuess);
     if (used.includes(playerGuess)) {
-      tryagainText.textContent = "You've already guessed that letter, try again!";
+      console.log("Already guessed that letter!")
+      fadeText.className = "visible";
     // Check if the letter the player pressed is not equal to the computer guess
       } else if (playerGuess != computerGuess) {
         // Adds the letter the player pressed to the used variable so it cannot be counted twice against guesses
@@ -61,12 +63,15 @@ document.onkeyup = function(event) {
         // Player loses 1 guess
         guesses = guesses -1;
         console.log("Guesses Remaining: " + guesses);
-      
+        
+        fadeText.className = "hidden";
         // Players letter is the same as computer's, add 1 to wins and reset through the pickRandom function
         } else {
           wins++;
           pickRandom();
           console.log("Wins " + wins);
+
+          fadeText.className = "hidden";
         }
 
         // Hide the directions

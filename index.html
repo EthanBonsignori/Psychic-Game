@@ -12,6 +12,9 @@
   <!-- My CSS -->
   <link rel="stylesheet" href="assets/css/style.css">
 
+  <!-- Custom Font -->
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+
   
 </head>
 
@@ -19,13 +22,14 @@
 
   <div>
     <h1>The Psychic Game</h1>
-    <p id="directions-text">Try to guess what letter I'm thinking of! Press any letter to start playing</p> 
-    <p id="wins-text"></p>
-    <p id="losses-text"></p>
-    <p id="guesses-text"></p>
+    <p id="directions-text">Try to guess what letter I'm thinking of! <br> Press any letter to start playing</p> 
+    <p id="wins-text" class="wins"></p>
+    <p id="losses-text" class="losses"></p>
+    <p id="guesses-text" class="guesses"></p>
     <p id="used-text"></p>
-    <p id="tryagain-text"></p>
+    <p id="tryagain-text" class="hidden">You've already guessed that letter!<br>Try Again</p>
   </div>
+  <p id="name">made by <a href="https://github.com/EthanBonsignori/Psychic-Game">ethan bonsignori</a></p>
 
 
 <!-- My JS -->
