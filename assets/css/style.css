@@ -1,0 +1,12 @@
+h1 {
+  font-weight: bold;
+  font-size: 300%;
+  text-align: center;
+  outline: 10px;
+  outline-color: purple;
+}
+
+p {
+  text-align: center;
+  font-size: 200%;
+}
